@@ -1,8 +1,18 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
-import "./App.scss";
+import React, {StrictMode} from "react";
+import {createRoot} from "react-dom/client";
 
-const el = document.getElementById("app");
+import Nav from "./components/Nav/Nav";
+import Section from "./components/Section";
+import Footer from "./components/Footer";
 
-ReactDOM.render(<App />, el);
+const root = createRoot(document.getElementById("root"));
+root.render(
+    <StrictMode>
+        <header>
+            <p>Navigation bar</p>
+            <Nav/>
+        </header>
+        <Section/>
+        <Footer/>
+    </StrictMode>
+);
